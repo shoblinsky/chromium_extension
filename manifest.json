@@ -1,0 +1,21 @@
+{
+    "name": "Steam community market history inspector",
+    "description": "Allows you to inspect in game a CS2 item that you sold on the Steam community market — in my market history.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "extension.html",
+        "default_icon": "128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://steamcommunity.com/market/"
+            ],
+            "js": [
+                "script.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
